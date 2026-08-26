@@ -13,7 +13,7 @@ for _ in range(4):
     print('--Formulario--')
     print('-='*30)
     n = str(input('Digite seu nome: '))
-    s = int(input('Digite seu sexo "0" se for do sexo masculino e digite "1" se for do sexo feminino: '))
+    s = str(input('Digite seu sexo [F/M]: ')).strip().upper()
     i = int(input('Digite sua idade: '))
 
     idade.append(i)
@@ -22,7 +22,7 @@ for _ in range(4):
 
 media = sum(idade) / len(idade)
 
-mulher = sexo.count(1)
+mulher = sexo.count('F')
 
 maior_idade = max(idade)
 
