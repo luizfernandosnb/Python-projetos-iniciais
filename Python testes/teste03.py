@@ -14,17 +14,16 @@ while True:
 def equacao_segundo_grau(a,b,c):
     if a == 0:
         return 'Não é um equação de 2º grau'
+    delta = (b**2)-(4*a*c)
+    if delta < 0:
+        return 'Não existem raizes reais para está equação'
+    elif delta == 0:
+        raiz = -b / (2*a)
+        return f'Existe apenas uma raiz real para está equação: {raiz}'
     else:
-        delta = (b**2)-(4*a*c)
-        if delta < 0:
-            return 'Não existem raizes reais para está equação'
-        elif delta == 0:
-            raiz = -b / (2*a)
-            return f'Existe appenas uma raiz rael para está equação: {raiz}'
-        else:
-            raiz1 = (-b + math.sqrt(delta)) / (2*a)
-            raiz2 = (-b - math.sqrt(delta)) / (2*a)
-            return f'As raizes reais para está equação são: {raiz1:.2f}, {raiz2:.2f}'
+        raiz1 = (-b + math.sqrt(delta)) / (2*a)
+        raiz2 = (-b - math.sqrt(delta)) / (2*a)
+        return f'As raizes reais para está equação são: {raiz1:.2f}, {raiz2:.2f}'
 print('=-'* 20)
 print('Resultado da equação de 2º grau')
 print('=-'* 20)
